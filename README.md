@@ -1,5 +1,5 @@
 # TechMind Challenge 2025
-
+<img width="480" height="853" alt="challenge" src="https://github.com/user-attachments/assets/16a69880-14fb-4d00-a0a3-8af638245f9f" />
 Three environmental monitoring projects in one repository. Each folder is a full copy of its original project, including that project's own README and setup steps.
 
 ## Winners
