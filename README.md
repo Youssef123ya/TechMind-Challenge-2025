@@ -1,5 +1,6 @@
 # TechMind Challenge 2025
 <img width="480" height="853" alt="challenge" src="https://github.com/user-attachments/assets/16a69880-14fb-4d00-a0a3-8af638245f9f" />
+
 ## Winners
 
 These projects won the NUB Computer Science competition.
