@@ -1,0 +1,69 @@
+# Desert Agriculture Sentinel Configuration
+
+satellite:
+  sentinel2:
+    api_url: "https://scihub.copernicus.eu/dhus"
+    username: ""  # Add your Copernicus Hub username
+    password: ""  # Add your Copernicus Hub password
+    download_dir: "data/sentinel2"
+  landsat:
+    api_url: "https://earthexplorer.usgs.gov"
+    username: ""  # Add your USGS EarthExplorer username
+    password: ""  # Add your USGS EarthExplorer password
+    download_dir: "data/landsat"
+
+processing:
+  cloud_threshold: 20  # Maximum cloud coverage percentage
+  ndvi_threshold:
+    bare_soil: 0.1
+    sparse_vegetation: 0.3
+    moderate_vegetation: 0.6
+    dense_vegetation: 0.8
+  output_resolution: 10  # meters
+  temporal_compositing_days: 16
+
+machine_learning:
+  models_dir: "models"
+  random_forest:
+    n_estimators: 100
+    max_depth: 10
+    min_samples_split: 5
+  svm:
+    kernel: "rbf"
+    C: 1.0
+    gamma: "scale"
+  cnn:
+    input_size: [64, 64, 6]
+    batch_size: 32
+    epochs: 50
+    learning_rate: 0.001
+
+water_optimization:
+  efficiency_targets:
+    baseline_efficiency: 0.7
+    target_efficiency: 0.9
+    water_stress_threshold: 0.3
+    optimal_soil_moisture: 0.6
+  irrigation_methods:
+    flood: 0.45
+    sprinkler: 0.75
+    drip: 0.90
+    micro_sprinkler: 0.85
+    subsurface_drip: 0.95
+
+alerts:
+  soil_moisture_threshold: 0.3
+  unhealthy_crop_threshold: 20  # percentage
+  notification_email: ""  # Add email for alerts
+  sms_number: ""  # Add SMS number for critical alerts
+
+logging:
+  level: "INFO"
+  log_file: "logs/desert_agriculture_sentinel.log"
+  max_file_size: 10485760  # 10MB
+  backup_count: 5
+
+database:
+  type: "sqlite"
+  path: "data/sentinel.db"
+  backup_interval_days: 7
