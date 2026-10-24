@@ -2,6 +2,14 @@
 
 Three environmental monitoring projects in one repository. Each folder is a full copy of its original project, including that project's own README and setup steps.
 
+## Winners
+
+These projects won the NUB Computer Science competition.
+
+![Certificate of appreciation](celebration/certificate.jpg)
+
+![NUB Computer Science winners](celebration/winners.jpg)
+
 | Challenge | Folder | Focus |
 | --- | --- | --- |
 | 1 | [Challenge-1-Red-Sea-Coral-Reef-Guardian](Challenge-1-Red-Sea-Coral-Reef-Guardian) | Classify coral health from images and review reef trends in a web app |
